@@ -1,0 +1,44 @@
+extends ../layouts/_auth.layout.pug
+
+block append head
+  title DevForum:Login
+  link(rel="stylesheet", href="/assets/css/bootstrap/bootstrap.min.css")
+  link(rel="stylesheet", href="/assets/css/bootstrap/bootstrap.min.css.map")
+  link(rel="stylesheet", href="/assets/fonts/fontawesome/css/font-awesome.css")
+  link(rel="stylesheet", href="/assets/css/auth/login.css")
+  style.
+    .auth-wrap-background {
+        background: url(/assets/images/backgrounds/#{image}.jpg);
+        background-size: cover;
+        background-position: 50%;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1
+    }
+block container
+  .auth-wrap-background
+    .form.content-center
+      .auth-brand
+        i.fa.fa-users(aria-hidden='true')
+      .auth-form.content-center
+        form.form-group.content-center(action='/auth/login', method='POST')
+          h1.hi Welcome back.
+            if success_msg
+              h5(style='color:#3c763d; margin-bottom:0; font-weight: bold;') #{success_msg}
+            if error_msg
+              h5(style='color:#f04747; margin-bottom:0; font-weight: bold;') #{error_msg}
+            if error
+              h5(style='color:#f04747; margin-bottom:0; font-weight: bold;') #{error}
+            .control-group
+              label(for='login-email') Username
+              input#login-email.form-control(type='text', name='username', autocomplete='off', spellcheck='false')
+            .control-group
+              label(for='login-password') Password
+              input#login-password.form-control(type='password', name='password', autocomplete='off', spellcheck='false')
+            button#login-btn.btn.btn-primary(type='submit' style='margin-top:48px;') Login
+        footer
+          | Don't have an account? 
+          a(href='/auth/register') Register

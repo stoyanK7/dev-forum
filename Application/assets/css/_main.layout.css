@@ -1,0 +1,31 @@
+@font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 400; src: url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.eot');
+src: local('Open Sans'), local('OpenSans'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.eot?#iefix')
+format('embedded-opentype'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.woff2')
+format('woff2'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.woff') format('woff'),
+url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.ttf') format('truetype'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.svg#OpenSans')
+format('svg'); } @font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 700; src: url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.eot');
+src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.eot?#iefix')
+format('embedded-opentype'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.woff2') format('woff2'),
+url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.woff') format('woff'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.ttf')
+format('truetype'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.svg#OpenSans') format('svg');
+} @font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 800; src: url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.eot');
+src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.eot?#iefix')
+format('embedded-opentype'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.woff2') format('woff2'),
+url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.woff') format('woff'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.ttf')
+format('truetype'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.svg#OpenSans') format('svg');
+} .push-right { float: right !important; } .push-left { float: left !important; } body { background-image: url("./../images/backgrounds/bg-repeat.jpg");
+background-repeat: repeat; } #wrapper { max-width: 1200px; margin: 0 auto; box-shadow: 0 0 15px #000; position: relative;
+font-family: "Open Sans", sans-serif !important; font-size: 14px !important; color: #000 !important; background-color: #fff;
+} #main-header { height: 68px; font-weight: bold; position: relative; background-color: #204066; } #user-panel { display:
+flex; align-items: center; justify-content: center; position: relative; vertical-align: top; padding: 0 15px; height: 100%;
+cursor: pointer; } a, a:hover { color: #fff; text-decoration: none; } a img { border: 1px solid white; margin-right: 5px;
+width: 35px; } #user-info { display: inline-block; vertical-align: top; } #user-points { display: block; } #main-container
+{ padding: 1%; } .fa { margin-left: 15px; } #main-nav { background-color: #5f5f5f; } #dev-forum { display: inline-block;
+margin-left: 3%; } #dev-forum>h1 { color: #fff; font-weight: bold; } .glyphicon { margin-right: 3px; } #categories { height:
+auto; width: auto; margin: 0 auto; padding: 3%; } #main-footer { background-color: #333333; padding: 1.5%; margin-top: 2%;
+} .rights { color: #9f9f9f; font-weight: bold; font-size: 1.3em; } .activeLI :hover { color: #3f3f3f; } .forumLI:hover {
+color: #3f3f3f; } .profilesetLI:hover { color: #3f3f3f; } .searchLI:hover { color: #3f3f3f; } .chatroomLI:hover { color:
+#3f3f3f; } .login-or-register { font-size: 1.5em; } .login-link:hover, .register-link:hover { text-decoration: underline;
+} .row { padding: 3px; } @media only screen and (max-width: 470px) { #dev-forum { height: 130px; } #main-header { height:
+auto; } #user-panel { position: relative; top: -50px; } } @media only screen and (max-width: 768px) { div.container-fluid
+ul li { display: inline-block !important; } }

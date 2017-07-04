@@ -1,0 +1,210 @@
+extends ./../layouts/_main.layout.pug
+block append head
+	title DevForum:Categories
+	link(rel="stylesheet", href="/assets/css/forum.categories.css")
+block container
+	#categories
+		a.btn(href='/forum/askQuestion')
+			span.glyphicon.glyphicon-question-sign(aria-hidden='true')
+			|  Ask question
+		h1.categories-heading
+			span.glyphicon.glyphicon-home(aria-hidden='true')
+			|  Forum home
+		h2.col-xs-12.col-md-12.col-lg-12 Programming
+		.five-random.col-xs-12.col-md-12.col-lg-12
+			.five-random-header.col-xs-12.col-md-12.col-lg-12
+				.question.text-center.col-xs-4.col-md-4.col-lg-8 Category
+				.stats.col-xs-4.col-md-4.col-lg-2.text-center Statistics
+				.author.col-xs-4.col-md-4.col-lg-2.text-center Last post
+			.five-random-body.col-xs-12.col-md-12.col-lg-12
+				.topic.col-xs-12.col-md-12.col-lg-12
+					.body-question.col-xs-4.col-md-4.col-lg-8
+						a.question-link(href='/forum/categories/ccpp') C/C++
+					.body-stats.col-xs-4.col-md-4.col-lg-2
+						.text-center
+							span.glyphicon.glyphicon-pencil(aria-hidden='true')
+							|  Topics : 
+							span.replies #{ccpp.topics}
+						.text-center
+							span.glyphicon.glyphicon-comment(aria-hidden='true')
+							|  Posts : 
+							span.points #{ccpp.posts}
+					.body-author.col-xs-4.col-md-4.col-lg-2.text-center
+						.col-xs-12.col-md-12.col-lg-12
+							span.span-author
+								a.span-author(href='/user/' + ccpp.lastPostUserUsername) #{ccpp.lastPostUserUsername}
+							span.span-date 07-12-2017
+				.topic.col-xs-12.col-md-12.col-lg-12
+					.body-question.col-xs-4.col-md-4.col-lg-8
+						a.question-link(href='')
+							| Java
+					.body-stats.col-xs-4.col-md-4.col-lg-2
+						.text-center
+							span.glyphicon.glyphicon-pencil(aria-hidden='true')
+							|  Topics : 
+							span.replies #{java.topics}
+						.text-center
+							span.glyphicon.glyphicon-comment(aria-hidden='true')
+							|  Posts : 
+							span.points #{java.posts}
+					.body-author.col-xs-4.col-md-4.col-lg-2.text-center
+						.col-xs-12.col-md-12.col-lg-12
+							span.span-author
+								a.span-author(href='/user/' + java.lastPostUserUsername) #{java.lastPostUserUsername}
+							span.span-date 07-12-2017
+				.topic.col-xs-12.col-md-12.col-lg-12
+					.body-question.col-xs-4.col-md-4.col-lg-8
+						a.question-link(href='')
+							| HTML/ CSS/ JS 
+							span.bonus Client-side programming
+					.body-stats.col-xs-4.col-md-4.col-lg-2
+						.text-center
+							span.glyphicon.glyphicon-pencil(aria-hidden='true')
+							|  Topics : 
+							span.replies #{clientSide.topics}
+						.text-center
+							span.glyphicon.glyphicon-comment(aria-hidden='true')
+							|  Posts : 
+							span.points #{clientSide.posts}
+					.body-author.col-xs-4.col-md-4.col-lg-2.text-center
+						.col-xs-12.col-md-12.col-lg-12
+							span.span-author
+								a.span-author(href='/user/' + clientSide.lastPostUserUsername) #{clientSide.lastPostUserUsername}
+							span.span-date 07-12-2017
+				.topic.col-xs-12.col-md-12.col-lg-12
+					.body-question.col-xs-4.col-md-4.col-lg-8
+						a.question-link(href='')
+							| Python/PHP /Perl/Ruby 
+							span.bonus Server-side programming
+					.body-stats.col-xs-4.col-md-4.col-lg-2
+						.text-center
+							span.glyphicon.glyphicon-pencil(aria-hidden='true')
+							|  Topics : 
+							span.replies #{serverSide.topics}
+						.text-center
+							span.glyphicon.glyphicon-comment(aria-hidden='true')
+							|  Posts : 
+							span.points #{serverSide.posts}
+					.body-author.col-xs-4.col-md-4.col-lg-2.text-center
+						.col-xs-12.col-md-12.col-lg-12
+							span.span-author
+								a.span-author(href='/user/' + serverSide.lastPostUserUsername) #{serverSide.lastPostUserUsername}
+							span.span-date 07-12-2017
+				.topic.col-xs-12.col-md-12.col-lg-12
+					.body-question.col-xs-4.col-md-4.col-lg-8
+						a.question-link(href='')
+							| .NET Programming 
+							span.bonus C#/VB.NET/.NET Framework
+					.body-stats.col-xs-4.col-md-4.col-lg-2
+						.text-center
+							span.glyphicon.glyphicon-pencil(aria-hidden='true')
+							|  Topics : 
+							span.replies #{dotNet.topics}
+						.text-center
+							span.glyphicon.glyphicon-comment(aria-hidden='true')
+							|  Posts : 
+							span.points #{dotNet.posts}
+					.body-author.col-xs-4.col-md-4.col-lg-2.text-center
+						.col-xs-12.col-md-12.col-lg-12
+							span.span-author
+								a.span-author(href='/user/' + dotNet.lastPostUserUsername) #{dotNet.lastPostUserUsername}
+							span.span-date 07-12-2017
+				.topic.col-xs-12.col-md-12.col-lg-12
+					.body-question.col-xs-4.col-md-4.col-lg-8
+						a.question-link(href='')
+							| Linux 
+							span.bonus Programming and working on Linux
+					.body-stats.col-xs-4.col-md-4.col-lg-2
+						.text-center
+							span.glyphicon.glyphicon-pencil(aria-hidden='true')
+							|  Topics : 
+							span.replies #{linux.topics}
+						.text-center
+							span.glyphicon.glyphicon-comment(aria-hidden='true')
+							|  Posts : 
+							span.points #{linux.posts}
+					.body-author.col-xs-4.col-md-4.col-lg-2.text-center
+						.col-xs-12.col-md-12.col-lg-12
+							span.span-author
+								a.span-author(href='/user/' + linux.lastPostUserUsername) #{linux.lastPostUserUsername}
+							span.span-date 07-12-2017
+				.topic.col-xs-12.col-md-12.col-lg-12
+					.body-question.col-xs-4.col-md-4.col-lg-8
+						a.question-link(href='')
+							| Other..
+					.body-stats.col-xs-4.col-md-4.col-lg-2
+						.text-center
+							span.glyphicon.glyphicon-pencil(aria-hidden='true')
+							|  Topics : 
+							span.replies #{other.topics}
+						.text-center
+							span.glyphicon.glyphicon-comment(aria-hidden='true')
+							|  Posts : 
+							span.points #{other.posts}
+					.body-author.col-xs-4.col-md-4.col-lg-2.text-center
+						.col-xs-12.col-md-12.col-lg-12
+							span.span-author
+								a.span-author(href='/user/' + other.lastPostUserUsername) #{other.lastPostUserUsername}
+							span.span-date 07-12-2017
+		h2.col-xs-12.col-md-12.col-lg-12 Others : 
+		.five-random.col-xs-12.col-md-12.col-lg-12
+			.five-random-header.col-xs-12.col-md-12.col-lg-12
+				.question.text-center.col-xs-4.col-md-4.col-lg-8 Category
+				.stats.col-xs-4.col-md-4.col-lg-2.text-center Statistics
+				.author.col-xs-4.col-md-4.col-lg-2.text-center Last post
+			.five-random-body.col-xs-12.col-md-12.col-lg-12
+				.topic.col-xs-12.col-md-12.col-lg-12
+					.body-question.col-xs-4.col-md-4.col-lg-8
+						a.question-link(href='')
+							| Computer Security 
+							span.bonus viruses,spam, spyware, adware
+					.body-stats.col-xs-4.col-md-4.col-lg-2
+						.text-center
+							span.glyphicon.glyphicon-pencil(aria-hidden='true')
+							|  Topics : 
+							span.replies #{compSecurity.topics}
+						.text-center
+							span.glyphicon.glyphicon-comment(aria-hidden='true')
+							|  Posts : 
+							span.points #{compSecurity.posts}
+					.body-author.col-xs-4.col-md-4.col-lg-2.text-center
+						.col-xs-12.col-md-12.col-lg-12
+							span.span-author
+								a.span-author(href='/user/' + compSecurity.lastPostUserUsername) #{compSecurity.lastPostUserUsername}
+							span.span-date 07-12-2017
+				.topic.col-xs-12.col-md-12.col-lg-12
+					.body-question.col-xs-4.col-md-4.col-lg-8
+						a.question-link(href='')
+							| Job ads
+					.body-stats.col-xs-4.col-md-4.col-lg-2
+						.text-center
+							span.glyphicon.glyphicon-pencil(aria-hidden='true')
+							|  Topics : 
+							span.replies #{jobAds.topics}
+						.text-center
+							span.glyphicon.glyphicon-comment(aria-hidden='true')
+							|  Posts : 
+							span.points #{jobAds.posts}
+					.body-author.col-xs-4.col-md-4.col-lg-2.text-center
+						.col-xs-12.col-md-12.col-lg-12
+							span.span-author
+								a.span-author(href='/user/' + jobAds.lastPostUserUsername) #{jobAds.lastPostUserUsername}
+							span.span-date 07-12-2017
+				.topic.col-xs-12.col-md-12.col-lg-12
+					.body-question.col-xs-4.col-md-4.col-lg-8
+						a.question-link(href='')
+							| Books/ Articles/ News
+					.body-stats.col-xs-4.col-md-4.col-lg-2
+						.text-center
+							span.glyphicon.glyphicon-pencil(aria-hidden='true')
+							|  Topics : 
+							span.replies #{booksArticlesNews.topics}
+						.text-center
+							span.glyphicon.glyphicon-comment(aria-hidden='true')
+							|  Posts : 
+							span.points #{booksArticlesNews.posts}
+					.body-author.col-xs-4.col-md-4.col-lg-2.text-center
+						.col-xs-12.col-md-12.col-lg-12
+							span.span-author
+								a.span-author(href='/user/' + booksArticlesNews.lastPostUserUsername) #{booksArticlesNews.lastPostUserUsername}
+							span.span-date 07-12-2017

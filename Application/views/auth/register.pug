@@ -1,0 +1,58 @@
+extends ../layouts/_auth.layout.pug
+
+block append head
+  title DevForum:Register
+  link(rel="stylesheet", href="/assets/css/bootstrap/bootstrap.min.css")
+  link(rel="stylesheet", href="/assets/css/bootstrap/bootstrap.min.css.map")
+  link(rel="stylesheet", href="/assets/fonts/fontawesome/css/font-awesome.css")
+  link(rel="stylesheet", href="/assets/css/auth/register.css")
+  style.
+    .auth-wrap-background {
+        background: url(/assets/images/backgrounds/#{image}.jpg);
+        background-size: cover;
+        background-position: 50%;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1
+    }
+block container
+  .auth-wrap-background
+    .form
+      .auth-brand.content-center
+        i.fa.fa-users(aria-hidden='true')
+      .auth-form.content-center
+        form.form-group.content-center(action='/auth/register', method='POST')
+          h1.hi Create an account
+          if success_msg
+              h5(style='color:#3c763d; margin-bottom:0; font-weight: bold;') #{success_msg}
+          if error
+            h5(style='color:#f04747; margin-bottom:0; font-weight: bold;') #{error}
+          if errors
+            h5(style='color:#f04747; margin-bottom:0; font-weight: bold;') #{error_msg}
+            .control-group(style='margin-top:3px;')
+              label(for='register-email' style="color:#f04747;") Email (This field is required!)     
+              input#register-email.form-control(type='email', name='email', autocomplete='off', spellcheck='false')
+            .control-group
+              label(for='register-username' style="color:#f04747;") Username (This field is required!)
+              input#register-username.form-control(type='text', name='username', autocomplete='off', spellcheck='false')
+            .control-group
+              label(for='login-password' style="color:#f04747;") Password (This field is required!)
+              input#register-password.form-control(type='password', name='password', autocomplete='off', spellcheck='false'  pattern='^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,}$' title="The password must be atleast 6 characters long, have atleast 1 digit,1 lowercase and 1 uppercase letter.")
+          else
+            .control-group
+              label(for='register-email') E-Mail
+              input#register-email.form-control(type='email', name='email', autocomplete='off', spellcheck='false')
+            .control-group
+              label(for='register-username') Username
+              input#register-username.form-control(type='text', name='username', autocomplete='off', spellcheck='false')
+            .control-group
+              label(for='login-password') Password
+              input#register-password.form-control(type='password', name='password', autocomplete='off', spellcheck='false' pattern='^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,}$' title="The password must be atleast 6 characters long, have atleast 1 digit,1 lowercase and 1 uppercase letter.")
+          button#login-btn.btn.btn-primary(type='submit') Continue
+        .divider(style='margin-bottom:12px;')
+        footer
+          | Already have an account? 
+          a(href='/auth/login') Login

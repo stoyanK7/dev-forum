@@ -1,0 +1,32 @@
+extends ./../layouts/_main.layout.pug
+block append head
+  title DevForum:#{cat}
+  link(rel="stylesheet", href="/assets/css/forum.categories.css")
+
+block container
+  div(id='categories col-xs-12 col-md-12 col-lg-12')
+    h2 Category : #{cat}
+    .five-random.col-xs-12.col-md-12.col-lg-12
+      .five-random-header.col-xs-12.col-md-12.col-lg-12
+        .question.text-center.col-xs-8.col-md-8.col-lg-8 Topic
+        .stats.col-xs-2.col-md-2.col-lg-2.text-center Statistics
+        .author.col-xs-2.col-md-2.col-lg-2.text-center Author
+      .five-random-body.col-xs-12.col-md-12.col-lg-12
+        each topic in topics
+          .topic.col-xs-12.col-md-12.col-lg-12
+            .body-question.col-xs-8.col-md-8.col-lg-8
+              a.question-link(href='/forum/topics/' + topic.id) #{topic.question}
+            .body-stats.col-xs-2.col-md-2.col-lg-2
+              .text-center
+                span.glyphicon.glyphicon-comment(aria-hidden='true')
+                |  Replies : 
+                span.replies #{topic.answers.length}
+              .text-center
+                span.glyphicon.glyphicon-eye-open(aria-hidden='true')
+                |  Views : 
+                span.points #{topic.views}
+            .body-author.col-xs-2.col-md-2.col-lg-2.text-center.vcenter
+              .col-xs-12.col-md-12.col-lg-12.vcenter
+                span.span-author
+                  a.span-author(href='/user/' + topic.author) #{topic.author}
+                span.span-date #{topic.dateCreated.toString().split(" ").slice(0,5).join(" ")}

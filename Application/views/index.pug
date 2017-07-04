@@ -1,0 +1,87 @@
+extends ./layouts/_main.layout.pug
+
+block append head
+  title DevForum
+  link(rel="stylesheet", href="/assets/css/index.css")
+
+block container
+  .row
+    h1#hot.col-xs-12.col-md-12.col-lg-12.text-center.h1 What's hot?
+    #categories.col-xs-12.col-md-12.col-lg-12
+      each hotQuestion in hotQuestions
+        .col-lg-4.col-md-4.col-xs-12.text-center.hot-div
+          case hotQuestion.category.toLowerCase()
+            when "dotnet"
+                 h3.hot-div-heading .NET Programming(C#/VB.NET/.NET Framework)
+                 - break
+            when "linux"
+                 h3.hot-div-heading Linux(Programming and working on Linux)
+                 - break
+            when "other"
+                 h3.hot-div-heading Other..
+                 - break
+            when "computersecurity"
+                 h3.hot-div-heading Computer Security (viruses,spam, spyware, adware)
+                 - break
+            when "jobads"
+                 h3.hot-div-heading Job Ads
+                 - break
+            when "ban"
+                h3.hot-div-heading Books/ Articles/ News 
+                 - break
+            when "ccpp"
+                h3.hot-div-heading C/C++
+                 - break
+            when "java"
+                 h3.hot-div-heading Java
+                 - break
+            when "clientside"
+                 h3.hot-div-heading HTML/ CSS/ JS(Client-side Programming)
+                 - break
+            when "serverside"
+                 h3.hot-div-heading PHP/Python/ NodeJS/Ruby (Server-side programming)
+                 - break
+          a.question-link(href='/forum/category/' + hotQuestion.id)
+            p.hot-div-question
+              | #{hotQuestion.question}
+          span.glyphicon.glyphicon-eye-open.btn-lg #{hotQuestion.views}
+          span.glyphicon.glyphicon-comment.btn-lg  #{hotQuestion.answersCount}
+    h1.col-xs-12.col-md-12.col-lg-12.text-center.h1 Five topics without answer
+    // <span id="date"></span>
+    .five-random.col-xs-12.col-md-12.col-lg-12
+      .five-random-header.col-xs-12.col-md-12.col-lg-12
+        .question.text-center.col-xs-8.col-md-8.col-lg-8 Topic
+        .stats.col-xs-2.col-md-2.col-lg-2.text-center Statistics
+        .author.col-xs-2.col-md-2.col-lg-2.text-center Author
+      .five-random-body.col-xs-12.col-md-12.col-lg-12
+        each question in questionsWithoutAnswersArray
+          .topic.col-xs-12.col-md-12.col-lg-12
+            .body-question.col-xs-8.col-md-8.col-lg-8
+              a.question-link(href='/forum/topics/' + question.id) #{question.question}
+            .body-stats.col-xs-2.col-md-2.col-lg-2
+              .text-center
+                i.fa.fa-comments(aria-hidden='true')
+                |  Replies : 
+                span.replies #{question.answersCount}
+              .text-center
+                span.glyphicon.glyphicon-eye-open(aria-hidden='true')
+                |  Views : 
+                span.points #{question.views}
+            .body-author.col-xs-2.col-md-2.col-lg-2.text-center.vcenter
+              .col-xs-12.col-md-12.col-lg-12.vcenter
+                span.span-author
+                  span.span-author
+                    a.span-author(href='/user/' + question.author) #{question.author}
+                  span.span-date #{question.dateCreated.toString().split(" ").slice(0,5).join(" ")}
+    h1.col-xs-12.col-md-12.col-lg-12.text-center Forum statistics
+    .forum-stats.col-xs-12.col-md-12.col-lg-12
+      img.img-responsive(src='/assets/images/stats.png', alt='Image')
+      |  Total users : 
+      span.bold #{forumStats.userCount}
+      |                        Total topics : 
+      span.bold #{forumStats.topicsCount}
+      |    Total replies : 
+      span.bold #{forumStats.repliesCount}
+      |                        Newest user : 
+      span.bold
+        a.newest(href='/user/' + forumStats.newestUserUsername) #{forumStats.newestUserUsername}

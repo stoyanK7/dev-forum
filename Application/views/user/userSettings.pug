@@ -1,0 +1,47 @@
+extends ./../layouts/_main.layout.pug
+
+block append head
+    link(rel="stylesheet", href="/assets/css/user/user.profile.settings.css")
+    title Profile settings: #{user.username}
+
+block container
+  .col-xs-12.col-md-12.col-lg-12.show-username-div
+    h1.show-username.text-center.col-xs-12.col-md-12.col-lg-12 Profile settings
+  .col-xs-12.col-md-12.col-lg-12.show-user-panel
+    .show-user-panel-img.col-xs-12.col-md-12.col-lg-4.text-center
+      if user.hasProfileImage
+        img.img-responsive(src="/assets/images/user/" + user.id + ".png", alt='Profile image')
+      else
+        img.img-responsive(src=user.profileImagePath, alt='Profile image')
+      span
+        span Your
+        |  current profile image
+      form(action='/user/settings/profileImage', method='POST',enctype='multipart/form-data')
+        label(for='newProfileImage') Browse new profile image : 
+        input(type='file', name='profileImage')
+        button.cpi(type='submit') Change profile image!
+    form(action='/user/settings/info', method='POST')
+      .show-user-panel-info.col-xs-12.col-md-12.col-lg-8
+        h3.col-xs-12.col-md-12.col-lg-12 User Info
+        input(type="hidden" name="userId" value=user.id)
+        .form-group
+          span.first-name.col-xs-12.col-md-12.col-lg-12
+            | First name:    
+            input.form-control(type='text', name='firstName' value=user.firstName)
+        .form-group
+          span.last-name.col-xs-12.col-md-12.col-lg-12
+            | Last name:    
+            input.form-control(type='text', name='lastName' value=user.lastName)
+        .form-group
+          span.location.col-xs-12.col-md-12.col-lg-12
+            | Location:    
+            input.form-control(type='text', name='location' value=user.location)
+        .form-group
+          span.email.col-xs-12.col-md-12.col-lg-12
+            | Email :    
+            input.form-control(type='text', name='email' value=user.email)
+        .form-group
+          span.languages.col-xs-12.col-md-12.col-lg-12
+            | Languages/Platforms(Seperate with comma-","):    
+            input.form-control(type='text', name='languages' value=user.languages)
+      button.cpi.push-right(type='submit', style='margin-top:15px; margin-right:25px;') Save changes!

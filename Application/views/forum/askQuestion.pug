@@ -1,0 +1,53 @@
+extends ./../layouts/_main.layout.pug
+
+block append head
+	title DevForum:Ask Question
+	link(rel="stylesheet", href="/assets/css/ask.question.css")
+
+block container
+	h1.categories-heading
+		i.fa.fa-question-circle(aria-hidden='true')
+		|  Ask question
+	h2
+		span.glyphicon.glyphicon-info-sign(aria-hidden='true')
+		|  Please read these rules before asking
+		|                     a question
+	.spans.col-lg-12
+		span.bold 1.
+		|  Write only in English!
+		br
+		span.bold 2.
+		|  Make sure the question you ask is not already answered!
+		br
+		span.bold 3.
+		|  Be specific!
+		br
+		span.bold 4.
+		|  Use 
+		a(href='http://www.pastebin.com') Pastebin
+		|  for your code.
+	.col-xs-12.col-md-12.col-lg-12
+		form(action='/forum/askQuestion', method='POST')
+			.form-group
+				label(for='question') Quesion : 
+				input.form-control(type='text', name='question')
+			.form-group
+				label(for='desc') Description : 
+				textarea.form-control(name='desc', style='width:100%; max-width:1155px;', rows='10')
+			.form-group
+				label(for='category') Category : 
+				select.form-control(name='category')
+					option(value='CCPP') C/C++
+					option(value='JAVA') Java
+					option(value='CLIENTSIDE') HTML/CSS/JS (Client side programming)
+					option(value='SERVERSIDE') PHP/Python/NodeJS (Server side programming)
+					option(value='DOTNET') C#/VB.NET/.NET Framework (.NET programming)
+					option(value='LINUX') Linux (Programming and working on Linux)
+					option(value='OTHER') Other..(programming)
+					option(value='COMPUTERSECURITY') Computer Security (viruses,spam,spyware,adware)
+					option(value='JOBADS') Job ads
+					option(value='BAN') Books/Articles/News
+			.form-group
+				label(for='tags') Tags(seperate with space) : 
+				input.form-control(type='text', name='tags')
+			button.push-right.btn.btn-submit(type='submit') Submit

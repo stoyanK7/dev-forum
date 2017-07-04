@@ -1,0 +1,36 @@
+extends ./../layouts/_main.layout.pug
+block append head
+	title DevForum:Categories
+	link(rel="stylesheet", href="/assets/css/forum.categories.css")
+block container
+	#categories
+		a.btn(href='/forum/askQuestion')
+			span.glyphicon.glyphicon-question-sign(aria-hidden='true')
+			|  Ask question
+		h1.categories-heading
+			span.glyphicon.glyphicon-home(aria-hidden='true')
+			|  Forum categories
+		.five-random.col-xs-12.col-md-12.col-lg-12
+			.five-random-header.col-xs-12.col-md-12.col-lg-12
+				.question.text-center.col-xs-4.col-md-4.col-lg-8 Category
+				.stats.col-xs-4.col-md-4.col-lg-2.text-center Statistics
+				.author.col-xs-4.col-md-4.col-lg-2.text-center Last post
+			.five-random-body.col-xs-12.col-md-12.col-lg-12
+				each category in categoriesArray
+					.topic.col-xs-12.col-md-12.col-lg-12
+						.body-question.col-xs-4.col-md-4.col-lg-8
+							a.question-link(href='/forum/category/' + category.name.toLowerCase()) #{category.showName}
+						.body-stats.col-xs-4.col-md-4.col-lg-2
+							.text-center
+								span.glyphicon.glyphicon-pencil(aria-hidden='true')
+								|  Topics : 
+								span.replies #{category.topics}
+							.text-center
+								span.glyphicon.glyphicon-comment(aria-hidden='true')
+								|  Posts : 
+								span.points #{category.posts}
+						.body-author.col-xs-4.col-md-4.col-lg-2.text-center
+							.col-xs-12.col-md-12.col-lg-12
+								span.span-author
+									a.span-author(href='/user/' + category.lastPostUserUsername) #{category.lastPostUserUsername}
+								span.span-date #{category.lastPostDate.toString().split(" ").slice(0,5).join(" ")}

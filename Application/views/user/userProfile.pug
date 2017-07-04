@@ -1,0 +1,46 @@
+extends ./../layouts/_main.layout.pug
+
+block append head
+  title User profile: #{foundUser.username}
+  link(rel="stylesheet", href="/assets/css/user/user.profile.css")
+
+block container
+  .col-xs-12.col-md-12.col-lg-12.show-username-div
+    h1.show-username.text-center.col-xs-12.col-md-12.col-lg-12 User profile of #{foundUser.username}
+  .col-xs-12.col-md-12.col-lg-12.show-user-panel
+    .show-user-panel-img.col-xs-12.col-md-12.col-lg-4.text-center
+      if foundUser.hasProfileImage
+        img.img-responsive(src='/assets/images/user/' + foundUser.id + '.png', alt='Found User image')
+      else
+        img.img-responsive(src=foundUser.profileImagePath, alt='Found User image')
+      span
+        | Profile image of 
+        span #{foundUser.username}
+    .show-user-panel-info.col-xs-12.col-md-12.col-lg-8
+      h3.col-xs-12.col-md-12.col-lg-12 User Info
+      span.first-name.col-xs-12.col-md-12.col-lg-12
+        | First name:    
+        span #{foundUser.firstName}
+      span.last-name.col-xs-12.col-md-12.col-lg-12
+        | Last name:    
+        span #{foundUser.lastName}
+      span.location.col-xs-12.col-md-12.col-lg-12
+        | Location:    
+        span #{foundUser.location}
+      span.email.col-xs-12.col-md-12.col-lg-12
+        | Email :    
+        span #{foundUser.email}
+      span.languages.col-xs-12.col-md-12.col-lg-12
+        | Languages/Platforms:    
+        span #{foundUser.languages}
+      span.joined.col-xs-12.col-md-12.col-lg-12
+        | Joined(DD/MM/YYYY  HH-MM):    
+        span #{joined.day}-#{joined.month}-#{joined.year}  #{joined.hour}:#{joined.minutes}
+      br(style='width:100%;color:#3f3f3f; height:1px;')
+      h3.col-xs-12.col-md-12.col-lg-12 Forum statistics
+      span.col-xs-12.col-md-12.col-lg-12
+        | Points:    
+        span #{foundUser.forumPoints}
+      span.col-xs-12.col-md-12.col-lg-12
+        | Answers:    
+        span #{foundUser.answers}

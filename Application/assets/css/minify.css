@@ -1,0 +1,16 @@
+@font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 400; src: url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.eot');
+src: local('Open Sans'), local('OpenSans'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.eot?#iefix')
+format('embedded-opentype'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.woff2')
+format('woff2'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.woff') format('woff'),
+url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.ttf') format('truetype'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.svg#OpenSans')
+format('svg'); } @font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 700; src: url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.eot');
+src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.eot?#iefix')
+format('embedded-opentype'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.woff2') format('woff2'),
+url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.woff') format('woff'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.ttf')
+format('truetype'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.svg#OpenSans') format('svg');
+} @font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 800; src: url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.eot');
+src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.eot?#iefix')
+format('embedded-opentype'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.woff2') format('woff2'),
+url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.woff') format('woff'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.ttf')
+format('truetype'), url('../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.svg#OpenSans') format('svg');
+}

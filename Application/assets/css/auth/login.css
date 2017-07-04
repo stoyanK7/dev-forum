@@ -1,0 +1,51 @@
+/* open-sans-regular - latin-ext_latin_cyrillic_cyrillic-ext */ @font-face { font-family: 'Open Sans'; font-style: normal;
+font-weight: 400; src: url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.eot'); /* IE9
+Compat Modes */ src: local('Open Sans'), local('OpenSans'), url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.eot?#iefix')
+format('embedded-opentype'), /* IE6-IE8 */ url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.woff2')
+format('woff2'), /* Super Modern Browsers */ url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.woff')
+format('woff'), /* Modern Browsers */ url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.ttf')
+format('truetype'), /* Safari, Android, iOS */ url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-regular.svg#OpenSans')
+format('svg'); /* Legacy iOS */ } /* open-sans-700 - latin-ext_latin_cyrillic_cyrillic-ext */ @font-face { font-family: 'Open
+Sans'; font-style: normal; font-weight: 700; src: url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.eot');
+/* IE9 Compat Modes */ src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.eot?#iefix')
+format('embedded-opentype'), /* IE6-IE8 */ url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.woff2')
+format('woff2'), /* Super Modern Browsers */ url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.woff')
+format('woff'), /* Modern Browsers */ url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.ttf')
+format('truetype'), /* Safari, Android, iOS */ url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-700.svg#OpenSans')
+format('svg'); /* Legacy iOS */ } /* open-sans-800 - latin-ext_latin_cyrillic_cyrillic-ext */ @font-face { font-family: 'Open
+Sans'; font-style: normal; font-weight: 800; src: url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.eot');
+/* IE9 Compat Modes */ src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.eot?#iefix')
+format('embedded-opentype'), /* IE6-IE8 */ url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.woff2')
+format('woff2'), /* Super Modern Browsers */ url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.woff')
+format('woff'), /* Modern Browsers */ url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.ttf')
+format('truetype'), /* Safari, Android, iOS */ url('../../fonts/Open_Sans/open-sans-v13-latin-ext_latin_cyrillic_cyrillic-ext-800.svg#OpenSans')
+format('svg'); /* Legacy iOS */ } body { font-family: 'Open Sans', Arial, Helvetica, sans-serif !important; height: 100%;
+width: 100%; display: block; overflow: hidden; z-index: 0; } .form { width: 628px; height: 422px; position: fixed; top: 50%;
+left: 50%; transform: translate(-50%, -50%); background: rgba(44, 37, 58, 0.95); border-radius: 3px; padding: 0; margin:
+0; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; overflow: hidden; z-index:
+10; } .auth-brand { display: inline-block; width: 228px; height: 100%; justify-content: center; align-items: center; text-align:
+center; background: hsla(0, 0%, 100%, .9); padding: 30px; overflow: hidden; } .auth-form { padding: 30px; width: 396px; height:
+100%; display: inline-block; overflow: hidden; margin: 0; } .fa-users { font-size: 10em !important; position: relative; top:
+30%; /*background-image: linear-gradient(to bottom, #5e74a3 0%, #4c68a5 100%) !important;*/ background: #204066; color: transparent;
+-webkit-background-clip: text; background-clip: text; } .hi { margin: 0; text-align: center; text-transform: uppercase; font-weight:
+800; font-size: 17px; margin-bottom: 30px; color: #fff; } .control-group { margin-top: 18px; } form label { font-size: 11px;
+font-weight: 700; text-transform: uppercase; color: #87909c; display: block; } form .control-group input { font-size: 16px;
+font-weight: 400; color: #ffffff; border: none; outline: none; border-bottom: 1px solid #f0f0f0; margin-bottom: 1px; width:
+100%; resize: none; background: transparent; border-bottom-color: hsla(0, 0%, 100%, .1); color: #fff; border-radius: 0; margin-top:
+12px; line-height: 34px; box-shadow: 0 !important; -webkit-appearance: none; background-image: none !important; outline:
+none !important; -webkit-box-shadow: none !important; box-shadow: none !important; } form .control-group input:focus { border-bottom:
+2px solid #f0f0f0; box-shadow: 0 !important; -webkit-appearance: none; background-image: none !important; outline: none !important;
+-webkit-box-shadow: none !important; box-shadow: none !important; } .btn-primary { width: 100%; height: 50px; margin: 0;
+margin-top: 70px; padding: 0; display: inline-block; text-align: center; text-decoration: none; border-radius: 3px; /*background-color:
+#7289da !important;*/ background-color: Category#204066 !important; color: #fff; font-size: 17px; font-weight: 600; position: relative;
+cursor: pointer; border: 0; line-height: 58px; border: none !important; font-weight: 700 !important; } #forgot { font-size:
+11px; font-weight: 800; text-transform: uppercase; color: #fff; background: none; margin: 10px 0 0; display: block; padding:
+0; opacity: 0.25; border: none; } #forgot:hover { border-bottom: 2px solid #fff; } footer a { color: #fff; text-decoration:
+none; cursor: pointer; } footer a:hover { border-bottom: 2px solid #fff; color: #fff; text-decoration: none; cursor: pointer;
+} footer { font-size: 12px; color: #87909c; } /* Responsive */ @media only screen and (max-width: 630px) { .content-center
+{ justify-content: center; text-align: center; align-items: center; } .form { width: 101%; height: 101%; overflow: hidden;
+border-radius: 3px; background: rgb(44, 37, 58); } .auth-brand { width: 100%; height: 100px; padding: 20px; padding-top:
+5px; padding-bottom: 15px; /*background: #1e2124; !!!!!!*/ justify-content: center; text-align: center; align-items: center;
+background: hsla(0, 0%, 100%, .9); } .auth-form { width: 100%; height: auto; background: rgb(44, 37, 58); } form.form-group
+{ width: 100%; height: 100%; padding: 10px; background: rgb(44, 37, 58); } .control-group { width: 100%; height: auto; }
+.fa-users { font-size: 5em !important; top: 27%; } }

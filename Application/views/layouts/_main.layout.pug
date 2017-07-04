@@ -1,0 +1,69 @@
+doctype html
+html(lang='en')
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport', content='width=device-width, initial-scale=1.0')
+      meta(http-equiv='X-UA-Compatible', content='ie=edge')
+      link(rel="stylesheet", href="/assets/css/bootstrap/bootstrap.min.css")
+      link(rel="stylesheet", href="/assets/fonts/fontawesome/css/font-awesome.css")
+      link(rel="stylesheet", href="/assets/css/_main.layout.css")
+  body
+    #wrapper
+      header#main-header
+        #dev-forum
+          h1 < DevForum />
+        #user-panel.push-right(style='margin-right:10px;')
+          if user
+            a(href='/user/' + user.username)
+              if user.hasProfileImage
+                img(src="/assets/images/user/" + user.id + ".png", alt='Profile Image')
+              else
+                img(src=user.profileImagePath, alt='Profile Image')
+              #user-info
+                span.push-left #{user.username}
+                span#user-points
+                  i.fa.fa-star(aria-hidden='true')
+                  |  #{user.forumPoints}
+            a(href='/auth/logout')
+              i.fa.fa-sign-out.fa-3x(aria-hidden='true', alt='Logout')
+          else
+            span.login-or-register
+              a.login-link(href='/auth/login') Login
+              |  or 
+              a.register-link(href='/auth/register') Register
+      nav#main-nav
+        .container-fluid
+          ul.nav.navbar-nav
+            li.active.activeLI
+              a.activeLI(href='/')
+                span.glyphicon.glyphicon-home(aria-hidden='true')
+                |  Home
+            li
+              a.forumLI(href='/forum')
+                span.glyphicon.glyphicon-th-list(aria-hidden='true')
+                |  Forum
+            li
+              a.profilesetLI(href='/user/settings')
+                span.glyphicon.glyphicon-cog(aria-hidden='true')
+                |  Profile settings
+            //- li
+            //-   a.searchLI(href='')
+            //-     span.glyphicon.glyphicon-search(aria-hidden='true')
+            //-     |  Search users
+            //- li
+            //-   a.chatroomLI(href='')
+            //-     span.glyphicon.glyphicon-console
+            //-     |  Chatroom
+      #main-container
+        .row
+          block container
+      footer#main-footer.text-center
+        h1.rights © 2017 DevForum. All rights reserved
+    script.
+      n = new Date();
+      y = n.getFullYear();
+      m = n.getMonth() + 1;
+      d = n.getDate();
+      h = n.get
+      document.getElementById("date").innerHTML = m + "/" + d + "/" + y;

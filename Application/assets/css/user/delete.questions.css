@@ -1,0 +1,10 @@
+ .question, .stats, .author { overflow: hidden; background-color: #204066; color: #fff; font-weight: bold; padding: 1%; }
+.question { border-radius: 5px 0 0 0; } .author { border-radius: 0 5px 0 0; } .topic { background-color: #FAFCFE; padding:
+0; } .body-question { padding: 0; color: #000; font-weight: bold; } .replies, .points { font-weight: bold; color: rgb(82,
+82, 82); } .glyphicon { margin-right: 3px; } .topic { border: 1px solid #5f5f5f; } .span-author { color: #5B6B7E; } .body-author>div
+{ padding: 0; } .body-author { padding: 0; } .span-date { color: #000; } .span-date, .span-author { display: block; } .body-stats
+{ padding: 0; } .categories-heading { color: #3f3f3f; } .body-question { line-height: 40px; padding-left: 2%; } h2 { padding-left:
+20px; color: #3f3f3f; } .span-author:hover { color: #5B6B7E; font-weight: bold; } .question-link { font-weight: bold; color:
+#000; } .question-link:hover { font-weight: 800; color: #000; } @media only screen and (max-width: 500px) { .five-random
+{ padding: 0; } .body-question { line-height: 20px; } } .btn { color:#fff; background-color: #204066; font-weight: bold;
+}

@@ -1,0 +1,17 @@
+ a, a:hover { color: #fff; text-decoration: none; } .fa { margin-left: 15px; } .h1 { margin-bottom: 2%; color: #2f2f2f; display:
+inline-block; margin-left: 2%; } .hot-div { height: 100%;;background-color: #FAFCFE; border: 1px solid black; padding: 0; } .hot-div-heading
+{ color: #3f3f3f !important; /*color:#40B95A;*/ margin: 2%; display: block; font-weight: bold; color: #204066; font-size: 20px; } .hot-div-question {
+margin: 0 auto; text-align: justify; width: 85%; color:#204066;} .hot-div-points { display: block; } .question, .stats, .author { overflow:
+hidden; background-color: #204066; color: #fff; font-weight: bold; padding: 1%; } .question { border-radius: 5px 0 0 0; }
+.author { border-radius: 0 5px 0 0; } .topic { background-color: #FAFCFE; padding: 0; } .body-question { padding-left: 8px;
+color: #000; font-weight: bold; line-height: 40px; } .body-language { margin-right: 1%; color: #1f90ff; font-weight: bold;
+font-size: 1.5em; background-color: #4f4f4f; padding: 0; display: inline-block; height: 40px; width: 40px; line-height: 40px;
+} .replies, .points { font-weight: bold; color: rgb(82, 82, 82); } .topic { border: 1px solid #5f5f5f; } .span-author { color:
+#5B6B7E; } .body-author>div { padding: 0; } .body-author { padding: 0; } .span-date { color: #000; } .span-date, .span-author
+{ display: block; } .body-stats { padding: 0; } .row { padding: 10px; } .forum-stats { border: 1px solid #3f3f3f; background-color:
+#8f8f8f; line-height: 39px; } #main-container h1 { text-transform: uppercase; font-weight: bold; color: #4f4f4f; } .bold
+{ font-weight: bold; } .img-responsive { height: 40px; float: left; margin-right: 4px; } .question-link { font-weight: bold;
+color: #000; } .question-link:hover { font-weight: 800; color: #000; } .span-author { color: #5B6B7E; display: block; } .span-author:hover
+{ color: #5B6B7E; font-weight: bold; } .newest { color: #000; } .newest:hover { color: #000; font-weight: 800; } @media only
+screen and (max-width: 500px) { .five-random-body, .five-random-header { padding: 0; } .body-question { line-height: 20px;
+} } #categories{width: 100% !important;} .hot-div .glyphicon { color:#000;}

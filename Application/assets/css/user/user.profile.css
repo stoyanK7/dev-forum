@@ -1,0 +1,6 @@
+.show-username { color: #3f3f3f; margin-top: 2%; margin-bottom: 2%; font-weight: bold; } .show-username-div { background-color:
+#DDDDDD; margin-top: 3%; } .show-user-panel-imgg { width: 80px; } .show-user-panel { margin-top: 4%; } .show-user-panel-info>span,
+.user-points { color: #3f3f3f; font-weight: bold; margin: 1%; } .show-user-panel-info>span>span, .user-points>span { color:
+#3f3f3f; font-weight: normal; } .img-responsive { border: 1px solid #8f8f8f; margin: 10px auto; max-height: 190px; } h3 { color: #3f3f3f; font-weight:
+bold; background-color: #8f8f8f; padding: 1%; border-radius: 5px 5px 0 0; } .show-user-panel-img>span { color: #3f3f3f; font-size:
+1.4em; } .show-user-panel-img>span>span { font-weight: bold; }

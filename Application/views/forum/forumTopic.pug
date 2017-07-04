@@ -1,0 +1,77 @@
+extends ./../layouts/_main.layout.pug
+block append head
+  title DevForum : #{mainQuestion.question}
+  link(rel="stylesheet", href="/assets/css/forum.topic.css")
+  link(rel="stylesheet", href="/assets/css/button.css")
+  script(src="/assets/js/bootstrap.js")
+  script(src="/assets/js/button.js")
+
+block container
+  span.smth.col-lg-12
+    a.forum-index(href='/forum') Forum
+    |  / 
+    a.forum-index(href=mainQuestion.category.toLowerCase()) #{neim}
+  #topic-body.col-xs-12.col-md-12.col-lg-12
+    // question
+    .main-question.col-xs-12.col-md-12.col-lg-12
+      .main-question-author-info.col-xs-12.col-md-2.col-lg-2.text-center
+        if mainAuthor.hasProfileImage
+          img.img-responsive(src='/assets/images/user/' + mainAuthor.id +".png", alt='Author profile picture')
+        else
+          img.img-responsive(src=mainAuthor.profileImagePath, alt='Author profile picture')
+        span#firs.naps
+          a.author-username(href='/user/' + mainAuthor.username) #{mainAuthor.username}
+        span.naps Joined : #{mainAuthor.joined.toString().split(" ").slice(0,5).join(" ")}
+        span.naps Points : #{mainAuthor.forumPoints}
+        span.naps Answers : #{mainAuthor.answers}
+      .main-question-desc.col-xs-12.col-md-10.col-lg-10
+        h4#main-question
+          | #{mainQuestion.question}
+        span.date
+          | asked on 
+          span.on #{mainQuestion.dateCreated.toString().split(" ").slice(0,3).join(" ")}
+          |  at 
+          span.on  #{mainQuestion.dateCreated.toString().split(" ").slice(4,5).join(" ")}
+        p#main-question-desc
+          | #{mainQuestion.description}
+    // question
+    // comments
+    .comments.col-xs-12.col-md-12.col-lg-12
+      if replies
+        each answer in replies
+          .answer.col-xs-12.col-md-12.col-lg-12
+            .main-question-author-info.col-xs-12.col-md-2.col-lg-2.text-center
+              if answer.author.hasProfileImage
+                img.img-responsive(src='/assets/images/user/' + answer.author.id +".png", alt='Author profile picture')
+              else
+                img.img-responsive(src=answer.author.profileImagePath, alt='Author profile picture')
+              span.naps#firs
+                a.author-username #{answer.author.username}
+              span.naps Joined : #{answer.author.joined.toString().split(" ").slice(0,5).join(" ")}
+              span.naps Points : #{answer.author.forumPoints}
+              span.naps Answers : #{answer.author.answers}
+            .main-question-desc.col-xs-12.col-md-10.col-lg-10
+              h4#main-question
+                | RE : #{mainQuestion.question}
+              span.date
+                | answered on 
+                span.on #{answer.date.toString().split(" ").slice(0,3).join(" ")}
+                | at 
+                span.on  #{answer.date.toString().split(" ").slice(4,5).join(" ")}
+              p#main-question-desc
+                | #{answer.description.description}
+                
+    // comments
+    if user
+      form(action='/forum/topics/' + mainQuestion.id, method='POST', style='width:100%;')
+        h3 Want to share your opinion?
+        .form-group
+          label(for='desc') Your reply : 
+          textarea.form-control.col-lg-12(name='desc', rows='10')
+          input(type="hidden" name="category" value=mainQuestion.category)
+        button.done.btn(type='submit') Post Your Answer
+    else
+      h3 You must login to reply!
+  //- button#btn.btnn(type='button')
+  //-   span#arrow.glyphicon.glyphicon-menu-down(aria-hidden='true')
+

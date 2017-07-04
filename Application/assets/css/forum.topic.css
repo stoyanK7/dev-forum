@@ -1,0 +1,12 @@
+ .main-question { padding: 0; margin-bottom: 15px; } .main-question-author-info { min-height: 318px; background-color: #dbdbdb;
+} .main-question { border: 2px solid #8f8f8f; } .img-responsive { max-height: 140px; margin: 0 auto; margin-top: 10px; border:
+3px solid #204066; } .author-username { color: #4f4f4f; font-weight: bold; } .author-username:hover { color: #204066; font-weight:
+900; } #main-question { font-size: 1.4em; font-weight: bold; color: #3f3f3f; margin-top: 2%; } .naps { display: block; }
+#firs { margin: 5px; } #main-question-desc { margin-top: 5%; } .answer { border: 2px solid #8f8f8f; padding: 0; margin-bottom:
+10px; } .comments { margin-top: 5px; padding: 0; } @media only screen and (max-width: 991px) { .main-question-author-info
+{ border-right: none; border-bottom: 2px solid #8f8f8f; } } .vote { font-size: 3em; border-radius: 7px; border-color: #8f8f8f;
+color: #204066; margin: 10px; float: left; } button[type=submit], form { display: inline-block; } form { margin-top: 30px;
+} .center { margin: 0 auto; width: 270px; margin-bottom: 10px; } .on { font-weight: bold; } .date { margin-left: 10px; }
+.forum-index { color: #3f3f3f; font-weight: bold; font-size: 1.5em; } .smth { margin: 20px; } .forum-index:hover { color:
+#3f3f3f; font-weight: bold; font-size: 1.5em; text-decoration: underline; } .done { width: auto; padding: 5px; background-color:
+#204066; color:#fff; font-weight: bold; font-size: 1.2em; border-radius: 5px; float: right; margin: 10px; }
